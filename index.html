@@ -1,0 +1,367 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>استخدام | شرکت بازرگانی مرسلی</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;800;900&display=swap"
+          rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #e5e5e5;
+            font-family: 'Vazirmatn', Tahoma, sans-serif;
+            padding: 20px;
+        }
+
+        .banner {
+            width: 700px;
+            min-height: 850px;
+            position: relative;
+            overflow: hidden;
+            padding: 45px;
+            color: white;
+            background:
+                radial-gradient(circle at 10% 80%,
+                #4a2417 0%, transparent 35%),
+                linear-gradient(140deg, #222328, #0c0d10 75%);
+            box-shadow: 0 20px 50px #0004;
+            border-bottom: 8px solid #ff641f;
+        }
+
+        /* خطوط تزئینی معماری */
+        .banner::before {
+            content: "";
+            position: absolute;
+            width: 330px;
+            height: 470px;
+            left: -100px;
+            top: 180px;
+            opacity: 0.22;
+            border: 2px solid #ff641f;
+            transform: skewY(-15deg);
+            box-shadow:
+                25px 25px 0 #ffffff12,
+                50px 50px 0 #ff641f33,
+                75px 75px 0 #ffffff12;
+        }
+
+        .banner::after {
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            left: -100px;
+            top: 100px;
+            border: 2px solid #ff641f;
+            transform: rotate(45deg);
+            opacity: 0.5;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* نام شرکت در بالای بنر */
+        .brand {
+            font-size: 22px;
+            font-weight: 900;
+            margin-bottom: 75px;
+        }
+
+        .brand span {
+            color: #ff641f;
+        }
+
+        .brand-english {
+            direction: ltr;
+            text-align: right;
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            color: #ff641f;
+            margin-top: 8px;
+        }
+
+        .label {
+            display: inline-block;
+            color: #ff641f;
+            border: 1px solid #ff641f;
+            padding: 8px 16px;
+            font-size: 14px;
+            margin-bottom: 22px;
+        }
+
+        h1 {
+            font-size: 55px;
+            font-weight: 900;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        h1 span {
+            color: #ff641f;
+        }
+
+        .subtitle {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        .subtitle span {
+            color: #ff641f;
+        }
+
+        .description {
+            color: #d0d0d0;
+            font-size: 17px;
+            line-height: 2.2;
+            margin-bottom: 30px;
+        }
+
+        .skills {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-bottom: 35px;
+        }
+
+        .skill {
+            padding: 12px 16px;
+            border-right: 4px solid #ff641f;
+            background: #ffffff0b;
+            font-size: 15px;
+        }
+
+        .skill span {
+            color: #ff641f;
+            margin-left: 10px;
+        }
+
+        .cta {
+            background: #ff641f;
+            color: #111;
+            padding: 20px;
+            text-align: center;
+            font-weight: 900;
+            font-size: 19px;
+            margin-bottom: 30px;
+        }
+
+        /* اطلاعات تماس در پایین بنر */
+        .footer {
+            border-top: 1px solid #454545;
+            padding-top: 22px;
+            color: #ddd;
+            font-size: 14px;
+            line-height: 2.2;
+            text-align: center;
+        }
+
+        .footer strong {
+            color: #ff641f;
+        }
+
+        .contact-number {
+            display: block;
+            direction: ltr;
+            margin: 8px 0 14px;
+        }
+
+        .contact-number a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .contact-number a:hover {
+            color: #ff641f;
+        }
+
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            direction: ltr;
+            text-decoration: none;
+            color: #fff;
+            border: 1px solid #ff641f;
+            padding: 7px 12px;
+            font-size: 12px;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #ff641f;
+            color: #111;
+        }
+
+        @media (max-width: 740px) {
+            body {
+                padding: 10px;
+            }
+
+            .banner {
+                width: 100%;
+                min-height: 760px;
+                padding: 28px;
+            }
+
+            .brand {
+                margin-bottom: 60px;
+                font-size: 20px;
+            }
+
+            .brand-english {
+                font-size: 13px;
+                letter-spacing: 2px;
+            }
+
+            h1 {
+                font-size: clamp(34px, 8vw, 50px);
+            }
+
+            .subtitle {
+                font-size: 20px;
+            }
+
+            .description {
+                font-size: 15px;
+            }
+
+            .cta {
+                font-size: 16px;
+                padding: 16px 10px;
+            }
+
+            .social-links {
+                gap: 8px;
+            }
+
+            .social-links a {
+                font-size: 11px;
+                padding: 7px 9px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="banner">
+        <div class="content">
+
+            <!-- نام فارسی و انگلیسی شرکت در بالای صفحه -->
+            <div class="brand">
+                شرکت بازرگانی <span>مرسلی</span>
+
+                <div class="brand-english">
+                    MORSALI HOLDING
+                </div>
+            </div>
+
+            <div class="label">فرصت همکاری</div>
+
+            <h1>
+                استخدام
+                <br>
+                <span>تولیدکننده محتوا</span>
+            </h1>
+
+            <div class="subtitle">
+                در حوزه <span>ساختمان و معماری</span>
+            </div>
+
+            <p class="description">
+                به دنبال فردی خلاق، باانگیزه و حرفه‌ای هستیم
+                تا با ایده‌های تازه، داستان پروژه‌های ساختمانی
+                را به محتوایی جذاب و اثرگذار تبدیل کند.
+            </p>
+
+            <div class="skills">
+                <div class="skill">
+                    <span>✦</span>
+                    ایده‌پردازی و سناریونویسی
+                </div>
+
+                <div class="skill">
+                    <span>✦</span>
+                    تولید محتوای تصویری و ویدئویی
+                </div>
+
+                <div class="skill">
+                    <span>✦</span>
+                    آشنایی با شبکه‌های اجتماعی
+                </div>
+            </div>
+
+            <div class="cta">
+                خلاقیتت را به فرصت تبدیل کن!
+            </div>
+
+            <!-- شماره تماس و لینک‌های اینستاگرام -->
+            <footer class="footer">
+                رزومه و نمونه‌کارت را برای ما ارسال کن.
+
+                <br>
+
+                <strong>تماس با ما</strong>
+
+                <div class="contact-number">
+                    <a href="tel:09124417646">
+                        09124417646
+                    </a>
+                </div>
+
+                <strong>ما را در اینستاگرام دنبال کنید</strong>
+
+                <div class="social-links">
+                    <a href="https://www.instagram.com/almas_abhar/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        @almas_abhar
+                    </a>
+
+                    <a href="https://www.instagram.com/shahrebazi.almas/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        @shahrebazi.almas
+                    </a>
+
+                    <a href="https://www.instagram.com/morsali.building.group/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        @morsali.building.group
+                    </a>
+                </div>
+            </footer>
+
+        </div>
+    </main>
+
+</body>
+</html>
